@@ -1,0 +1,7 @@
+{
+    "default": {
+        "databaseUrl": "env:DATABASE_URL",
+        "migrationsTable": "pgmigrations",
+        "dir": "migrations"
+    }
+}
