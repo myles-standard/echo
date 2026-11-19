@@ -1,21 +1,35 @@
 {
+    "type": "module",
     "name": "echo",
     "version": "1.0.0",
     "description": "Spotify + AI custom playlist generator",
-    "main": "index.js",
     "scripts": {
-        "dev": "node --watch index.js",
-        "start": "node index.js",
-        "migrate:create": "node-pg-migrate create --migration-filename-format index",
-        "migrate:up": "node-pg-migrate up",
-        "migrate:down": "node-pg-migrate down"
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "payload": "payload",
+        "generate:types": "payload generate:types",
+        "generate:importmap": "payload generate:importmap",
+        "migrate:create": "payload migrate:create",
+        "migrate:up": "payload migrate",
+        "migrate:down": "payload migrate:down"
     },
     "dependencies": {
-        "express": "^4.21.0",
-        "express-session": "^1.19.0",
-        "node-pg-migrate": "^9.0.0",
-        "passport": "^0.7.0",
-        "passport-google-oauth2": "^0.2.0",
-        "pg": "^8.23.1"
+        "@payloadcms/db-postgres": "^3.93.0",
+        "@payloadcms/next": "^3.93.0",
+        "@payloadcms/richtext-lexical": "^3.93.0",
+        "@tailwindcss/postcss": "^4.3.5",
+        "graphql": "^16.15.0",
+        "next": "^16.4.6",
+        "payload": "^3.93.0",
+        "pg": "^8.23.1",
+        "postcss": "^8.5.33",
+        "react": "^19.3.1",
+        "react-dom": "^19.3.1",
+        "tailwindcss": "^4.3.5"
+    },
+    "devDependencies": {
+        "@types/react": "19.3.0",
+        "typescript": "7.0.2"
     }
 }

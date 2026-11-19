@@ -7,21 +7,19 @@
 node_modules/
 dist/
 
-# Compiled Java class files
-*.class
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Payload
+generated-schema.graphql
 
 # Compiled Python bytecode
 *.py[cod]
 
 # Log files
 *.log
-
-# Package files
-*.jar
-
-# Maven
-target/
-dist/
 
 # JetBrains IDE
 .idea/
@@ -38,7 +36,6 @@ Thumbs.db
 # Applications
 *.app
 *.exe
-*.war
 
 # Large media files
 *.mp4

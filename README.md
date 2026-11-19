@@ -31,12 +31,19 @@ After installing, stop and start the existing service containers with:
 ./dev/docker/stop.sh
 ./dev/docker/start.sh
 ./dev/docker/start.sh -r
+./dev/docker/start.sh -I
 ```
 
 Use `-r` as the first argument to restart services instead of starting them.
 Both scripts accept service names and options for their respective Docker
 Compose commands. Starting or restarting does not rebuild or recreate
 containers; use the install script when needed.
+
+Use `-I` as the first argument to start the database and run the app in an
+interactive one-off container, so you can respond to Payload schema prompts.
+Stop any existing app container first to avoid a port conflict. Additional
+arguments in this mode are options passed to `docker compose run` before
+the app service name. Exit the app with Ctrl+C; the database remains running.
 
 View logs for both services, or follow a specific service:
 
